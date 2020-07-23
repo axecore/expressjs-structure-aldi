@@ -1,11 +1,9 @@
 const express = require('express')
 const router = express.Router()
+const response = require('../config/response')
 
 router.get('/', (req, res) => {
-    res.json({
-        'status': 'ok',
-        'pesan': 'selamat datang'
-    })
+    response.ok("Selamat Datang", res)
 })
 
 module.exports = router
