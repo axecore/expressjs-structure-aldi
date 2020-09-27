@@ -6,10 +6,9 @@ const express = require('express'),
 // Route
 const router = require('./router')
 
-app.set('view engine', 'pug')
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(router)
 app.listen(port, () => console.log(`Aplikasi Berjalan pada http://localhost:${port}`))
 
-// Node Express by aldi
+// Node Express API by aldi

@@ -1,9 +1,6 @@
-const express = require('express')
-const router = express.Router()
-const response = require('../config/response')
+const express = require('express'), router = express.Router()
+const welcome = require('../controllers/index')
 
-router.get('/', (req, res) => {
-    response.ok("Selamat Datang", res)
-})
+router.get('/',  welcome.index)
 
 module.exports = router
