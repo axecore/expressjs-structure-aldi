@@ -3,10 +3,12 @@ Welcome = {
     
     index: function(req, res) {
 
-     res.status(200)
-            .json({
-                message: "Selamat datang"
-            })
+        const welcome = {
+            hai: "welcome to index this file with",
+            link: "handlebarsjs"
+        }
+
+        res.render("welcome", welcome)
         
     },
 
